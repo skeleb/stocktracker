@@ -1,0 +1,28 @@
+nav {
+    background-color: rgb(233, 181, 50);
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+h1 {
+    margin: 0;
+}
+
+
+
+.center {
+    text-align: center;
+}
+
+.stock-up {
+    color: lightgreen;
+}
+
+.stock-down {
+    color: red;
+}
+
+.stock-nochange {
+    color: #000;
+}

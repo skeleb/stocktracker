@@ -1,0 +1,27 @@
+<!doctype html>
+<title>Stocks by Lauri</title>
+<script src={{ url_for('static', filename="myscript.js") }}></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<body>
+  <nav>
+    <h1 class="center">Stocks</h1>
+  </nav>
+  <main>
+    <table>
+      <tr>
+        <th>Company</th>
+        <th>Symbol</th>
+        <th>Price</th>
+        <th>Today</th>
+      </tr>
+      {% for stock in data %}
+        <tr>
+          <td>{{ data[stock]["companyName"] }}</td>
+          <td>{{ data[stock]["symbol"] }}
+          <td>{{ data[stock]["delayedPrice"] }}</td>
+          <td class="change-percent">{{ data[stock]["changePercent"] }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </main>
+</body>
